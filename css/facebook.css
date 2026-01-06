@@ -15,8 +15,8 @@
     box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
     display: flex;
     flex-direction: column;
-    height: 600px;
-    justify-content: center;
+    height: auto;
+    justify-content: flex-start;
     padding: 20px;
     margin-top: 20px;
     width: 550px;
@@ -25,10 +25,10 @@
 .container-title-facebook {
     align-items: center;
     display: flex;
-    height: 15%;
     justify-content: center;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
 }
 
 .container-h3-face {
@@ -39,33 +39,29 @@
 }
 
 .container-iframe-face {
-    align-items: center;
+    align-items: flex-start;
     border: 1px solid #A49B91;
     box-shadow: 2px 2px 8px 0px rgb(164, 155, 145, 1);
     display: flex;
-    height: 85%;
     justify-content: center;
-    width: 99%;
+    width: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+    height: 570px;
 }
 
-.iframe-short-face {
-    display: none;
-}
-
+/* Responsive: ajuste automático del plugin de Facebook */
 @media (max-width: 1020px) {
     .container-facebook {
         width: auto;
+        max-width: 95%;
+        height: auto;
+        min-height: 700px;
     }
 
     .container-iframe-face {
-        width: 103%;
-    }
-
-    .iframe-large-face {
-        display: none;
-    }
-
-    .iframe-short-face {
-        display: initial;
+        width: 100%;
+        height: auto;
+        min-height: 600px;
     }
 }
